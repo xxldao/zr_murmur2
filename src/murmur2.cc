@@ -34,7 +34,7 @@ static PyObject* murmur2_murmur32n(PyObject* self, PyObject* args){
 }
 
 // Python module interface
-static char module_docstring[] = "This module provides murmur_64a.";
+static char module_docstring[] = "This module provides murmur2 hashing functions.";
 static PyMethodDef module_methods[] = {
     {"murmur64a", murmur2_murmur64a, METH_VARARGS, murmur64a_docstring},
     {"murmur32n", murmur2_murmur32n, METH_VARARGS, murmur32n_docstring},

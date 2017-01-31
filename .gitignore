@@ -2,3 +2,5 @@ build/
 dist/
 MANIFEST
 murmur.so
+.cache
+__pycache__
