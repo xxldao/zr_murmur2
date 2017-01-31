@@ -26,7 +26,7 @@ static PyObject* murmur2_murmur32n(PyObject* self, PyObject* args){
         int len;
         uint32_t seed, hashvalue;
 
-        if(!PyArg_ParseTuple(args,"sil",&key,&len,&seed))
+        if(!PyArg_ParseTuple(args,"sii",&key,&len,&seed))
             return NULL;
 
         hashvalue = MurmurHashNeutral2(key,len,seed);
