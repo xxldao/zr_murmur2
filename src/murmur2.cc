@@ -1,5 +1,4 @@
 #include <Python.h>
-#include <numpy/arrayobject.h>
 #include <stdint.h>
 #include <sstream>
 #include <string>
@@ -47,5 +46,4 @@ PyMODINIT_FUNC initmurmur2(void){
     if(m==NULL)
         return;
 
-    import_array();
 }
