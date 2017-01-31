@@ -4,6 +4,7 @@ import numpy.distutils.misc_util
 setup(
     name='murmur2',
     version='1.1.0',
+    install_requires=['numpy'],
     ext_modules=[
         Extension(
             "murmur2",
