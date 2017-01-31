@@ -1,10 +1,9 @@
 from distutils.core import setup, Extension
-import numpy.distutils.misc_util
+from distutils.sysconfig import get_python_inc
 
 setup(
     name='murmur2',
     version='1.1.0',
-    install_requires=['numpy'],
     ext_modules=[
         Extension(
             "murmur2",
@@ -13,7 +12,7 @@ setup(
                 "src/MurmurHash2.cpp",
             ],
             include_dirs=[
-                numpy.distutils.misc_util.get_numpy_include_dirs()[0],
+                get_python_inc(),
                 'include/'
             ],
 
@@ -24,4 +23,3 @@ setup(
     author_email="greg@ideafreemonoid.org",
     description="murmur2 python wrapper"
 )
-
