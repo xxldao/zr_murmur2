@@ -2,14 +2,26 @@
 This is Murmur2 hash wrapper for Python.
 
 ##How to install
-If you want to install Murmur2, execute the following script.
+
+### Prerequisites
+
+For now, you must install `numpy` prior to installing this package by running:
 ```bash
-python setup.py install
+pip install numpy
 ```
 
-You can also install from pip:
+### PIP install
+
+You can install from pip:
 ```bash
 pip install git+git://github.com/gsmcwhirter/murmur2.git
+```
+
+### Manual Install
+
+If you want to install Murmur2 from a local download, execute the following script.
+```bash
+python setup.py install
 ```
 
 ##How to use
