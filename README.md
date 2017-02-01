@@ -1,14 +1,9 @@
 #Murmur2
 This is Murmur2 hash wrapper for Python.
 
+This was forked and extended from https://www.github.com/orion46/murmur2 
+
 ##How to install
-
-### Prerequisites
-
-For now, you must install `numpy` prior to installing this package by running:
-```bash
-pip install numpy
-```
 
 ### PIP install
 
