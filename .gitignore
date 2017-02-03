@@ -4,3 +4,4 @@ MANIFEST
 murmur.so
 .cache
 __pycache__
+*.swp
