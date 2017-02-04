@@ -27,8 +27,8 @@ static PyObject* murmur2_mmr2_32(PyObject* self, PyObject* args, PyObject* kwarg
 }
 
 // Murmur2 32 bit alternate (Merkle-Damgard)
-static char mmr2_32a_docstring[] = "Calculate the unsigned 32-bit MurmurHash2 value using the Merkle-Damgard construction.\n\nBeware endian-ness and alignment across platforms.";
-static PyObject* murmur2_mmr2_32a(PyObject* self, PyObject* args, PyObject* kwargs){
+static char mmr2_32b_docstring[] = "Calculate the unsigned 32-bit MurmurHash2 value using the Merkle-Damgard construction.\n\nBeware endian-ness and alignment across platforms.";
+static PyObject* murmur2_mmr2_32b(PyObject* self, PyObject* args, PyObject* kwargs){
         const char* key = NULL;
         int len;
         uint32_t seed = 0;
@@ -61,8 +61,8 @@ static PyObject* murmur2_mmr2_32n(PyObject* self, PyObject* args, PyObject* kwar
 }
 
 // Murmur2 32 bit aligned
-static char mmr2_32al_docstring[] = "Calculate the unsigned 32-bit MurmurHash2 value.\nThis variant only does aligned reads, which should be safer on certain platforms.\nBeware endian-ness across platforms.";
-static PyObject* murmur2_mmr2_32al(PyObject* self, PyObject* args, PyObject* kwargs){
+static char mmr2_32a_docstring[] = "Calculate the unsigned 32-bit MurmurHash2 value.\nThis variant only does aligned reads, which should be safer on certain platforms.\nBeware endian-ness across platforms.";
+static PyObject* murmur2_mmr2_32a(PyObject* self, PyObject* args, PyObject* kwargs){
         const char* key = NULL;
         int len;
         uint32_t seed = 0;
@@ -116,7 +116,7 @@ static char module_docstring[] = "This module provides murmur2 hashing functions
 static PyMethodDef module_methods[] = {
     {"hash_32",  (PyCFunction)murmur2_mmr2_32,   METH_VARARGS|METH_KEYWORDS, mmr2_32_docstring},
     {"hash_32a", (PyCFunction)murmur2_mmr2_32a,  METH_VARARGS|METH_KEYWORDS, mmr2_32a_docstring},
-    {"hash_32a", (PyCFunction)murmur2_mmr2_32al, METH_VARARGS|METH_KEYWORDS, mmr2_32al_docstring},
+    {"hash_32b", (PyCFunction)murmur2_mmr2_32b,  METH_VARARGS|METH_KEYWORDS, mmr2_32b_docstring},
     {"hash_32n", (PyCFunction)murmur2_mmr2_32n,  METH_VARARGS|METH_KEYWORDS, mmr2_32n_docstring},
     {"hash_64a", (PyCFunction)murmur2_mmr2_64a,  METH_VARARGS|METH_KEYWORDS, mmr2_64a_docstring},
     {"hash_64b", (PyCFunction)murmur2_mmr2_64b,  METH_VARARGS|METH_KEYWORDS, mmr2_64b_docstring},

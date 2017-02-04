@@ -20,18 +20,25 @@ python setup.py install
 ```
 
 ##How to use
-There are two functions implemented:
-- murmur64a
-- murmur32n
+
+Functions:
+
+- `hash_32` (MurmurHash2 32-bit)
+- `hash_32a` (MurmurHash2A 32-bit -- Merkle-Damgard construction)
+- `hash_32al` (MurmurHashAligned2 32-bit)
+- `hash_32n` (MurmurHashNeutral2 32-bit)
+- `hash_64a` (MurmurHash64A 64-bit for 64-bit architecture)
+- `hash_64b` (MurmurHash64B 64-bit for 32-bit architecture)
 
 Example:
 ```
 import murmur2
 
-print murmur2.murmur64a("test",4,100)
+print murmur2.hash_64a(key="test", seed=100)
 ```
 
-First argument, "test", is input.
-Second argument, 4, is the length of first argument.
-Third argument is a seed. If you set a different seed, murmur64a returns different hash value.
+The first argument, "test", is input to be hashed.
+The second argument is a seed. The seed is optional and defaults to 0.
+
+You can pass parameters by position or keyword.
 
