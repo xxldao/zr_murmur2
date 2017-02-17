@@ -1,9 +1,9 @@
-import murmur2
+import zr_murmur2
 
 
 def _test_murmur2(test_cases):
     for str_, hash32n, hash64a, seed in test_cases:
-        assert murmur2.hash_32n(str_, seed) == hash32n
+        assert zr_murmur2.hash_32n(str_, seed) == hash32n
         # assert murmur2.murmur64a(str_, len(str_), seed) == hash64a
 
 

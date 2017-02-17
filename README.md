@@ -9,7 +9,7 @@ This was forked and extended from https://www.github.com/orion46/murmur2
 
 You can install from pip:
 ```bash
-pip install git+git://github.com/gsmcwhirter/murmur2.git
+pip install git+git://github.com/gsmcwhirter/zr_murmur2.git
 ```
 
 ### Manual Install
@@ -32,9 +32,9 @@ Functions:
 
 Example:
 ```
-import murmur2
+import zr_murmur2
 
-print murmur2.hash_64a(key="test", seed=100)
+print zr_murmur2.hash_64a(key="test", seed=100)
 ```
 
 The first argument, "test", is input to be hashed.

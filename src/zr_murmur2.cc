@@ -123,6 +123,6 @@ static PyMethodDef module_methods[] = {
     {NULL, NULL, 0, NULL}
 };
 
-PyMODINIT_FUNC initmurmur2(void){
-    (void) Py_InitModule3("murmur2", module_methods, module_docstring);
+PyMODINIT_FUNC initzr_murmur2(void){
+    (void) Py_InitModule3("zr_murmur2", module_methods, module_docstring);
 }
