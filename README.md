@@ -1,9 +1,9 @@
-#Murmur2
+# Murmur2
 This is Murmur2 hash wrapper for Python.
 
 This was forked and extended from https://www.github.com/orion46/murmur2 
 
-##How to install
+## How to install
 
 ### PIP install
 
@@ -19,7 +19,7 @@ If you want to install Murmur2 from a local download, execute the following scri
 python setup.py install
 ```
 
-##How to use
+## How to use
 
 Functions:
 
