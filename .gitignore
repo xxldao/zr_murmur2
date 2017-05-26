@@ -5,3 +5,7 @@ murmur.so
 .cache
 __pycache__
 *.swp
+.idea
+cmake-build-debug
+CMakeLists.txt
+.python-version
