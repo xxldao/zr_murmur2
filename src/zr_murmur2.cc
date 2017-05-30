@@ -124,7 +124,7 @@ static PyMethodDef module_methods[] = {
 };
 
 
-// Compatibility for python 2 and 3
+// Compatibility for python 2 and 3 -- see http://python3porting.com/cextensions.html
 #if PY_MAJOR_VERSION >= 3
 #define MOD_ERROR_VAL NULL
 #define MOD_SUCCESS_VAL(val) val
