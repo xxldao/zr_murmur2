@@ -1,5 +1,7 @@
 from __future__ import absolute_import
+from __future__ import division
 from __future__ import print_function
+from __future__ import unicode_literals
 
 import inspect
 import unittest
@@ -46,6 +48,7 @@ class TestMurmur2(unittest.TestCase):
                 print("Testing hash_32n of", str_)
 
             self.assertEqual(zr_murmur2.hash_32n(str_, seed), hash32n)
+            self.assertEqual(zr_murmur2.hash_32n(str_.encode('utf-8')), hash32n)
             # assert murmur2.murmur64a(str_, len(str_), seed) == hash64a
 
 

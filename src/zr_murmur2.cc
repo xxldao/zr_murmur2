@@ -4,8 +4,8 @@
 #include <string>
 #include "../include/MurmurHash2.h"
 
-const char* ARGS_FMT_64 = "s|l";
-const char* ARGS_FMT_32 = "s|i";
+const char* ARGS_FMT_64 = "s#|l";
+const char* ARGS_FMT_32 = "s#|i";
 const char* ARGS_NAMES[] = {"key", "seed", NULL};
 
 
@@ -17,10 +17,8 @@ static PyObject* murmur2_mmr2_32(PyObject* self, PyObject* args, PyObject* kwarg
         uint32_t seed = 0;
         uint32_t hashvalue;
 
-        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &seed))
+        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &len, &seed))
             return NULL;
-
-        len = strlen(key);
 
         hashvalue = MurmurHash2((void*)key, len, seed);
         return Py_BuildValue("k", hashvalue);
@@ -34,10 +32,8 @@ static PyObject* murmur2_mmr2_32b(PyObject* self, PyObject* args, PyObject* kwar
         uint32_t seed = 0;
         uint32_t hashvalue;
 
-        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &seed))
+        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &len, &seed))
             return NULL;
-
-        len = strlen(key);
 
         hashvalue = MurmurHash2A((void*)key, len, seed);
         return Py_BuildValue("k", hashvalue);
@@ -51,10 +47,8 @@ static PyObject* murmur2_mmr2_32n(PyObject* self, PyObject* args, PyObject* kwar
         uint32_t seed = 0;
         uint32_t hashvalue;
 
-        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &seed))
+        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &len, &seed))
             return NULL;
-
-        len = strlen(key);
 
         hashvalue = MurmurHashNeutral2((void*)key, len, seed);
         return Py_BuildValue("k", hashvalue);
@@ -68,10 +62,8 @@ static PyObject* murmur2_mmr2_32a(PyObject* self, PyObject* args, PyObject* kwar
         uint32_t seed = 0;
         uint32_t hashvalue;
 
-        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &seed))
+        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_32, (char**)ARGS_NAMES, &key, &len, &seed))
             return NULL;
-
-        len = strlen(key);
 
         hashvalue = MurmurHashAligned2((void*)key, len, seed);
         return Py_BuildValue("k", hashvalue);
@@ -85,10 +77,8 @@ static PyObject* murmur2_mmr2_64a(PyObject* self, PyObject* args, PyObject* kwar
         uint64_t seed = 0;
         uint64_t hashvalue;
 
-        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_64, (char**)ARGS_NAMES, &key, &seed))
+        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_64, (char**)ARGS_NAMES, &key, &len, &seed))
             return NULL;
-
-        len = strlen(key);
 
         hashvalue = MurmurHash64A((void*)key, len, seed);
         return Py_BuildValue("k", hashvalue);
@@ -102,10 +92,8 @@ static PyObject* murmur2_mmr2_64b(PyObject* self, PyObject* args, PyObject* kwar
         uint64_t seed = 0;
         uint64_t hashvalue;
 
-        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_64, (char**)ARGS_NAMES, &key, &seed))
+        if(!PyArg_ParseTupleAndKeywords(args, kwargs, ARGS_FMT_64, (char**)ARGS_NAMES, &key, &len, &seed))
             return NULL;
-
-        len = strlen(key);
 
         hashvalue = MurmurHash64B((void*)key, len, seed);
         return Py_BuildValue("k", hashvalue);
