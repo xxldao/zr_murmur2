@@ -81,7 +81,7 @@ static PyObject* murmur2_mmr2_64a(PyObject* self, PyObject* args, PyObject* kwar
             return NULL;
 
         hashvalue = MurmurHash64A((void*)key, len, seed);
-        return Py_BuildValue("k", hashvalue);
+        return Py_BuildValue("K", hashvalue);
 }
 
 // Murmur2 64 bit for 32 bit platforms
@@ -96,7 +96,7 @@ static PyObject* murmur2_mmr2_64b(PyObject* self, PyObject* args, PyObject* kwar
             return NULL;
 
         hashvalue = MurmurHash64B((void*)key, len, seed);
-        return Py_BuildValue("k", hashvalue);
+        return Py_BuildValue("K", hashvalue);
 }
 
 // Python module interface
