@@ -1,3 +1,5 @@
+[![Python package](https://github.com/ZipRecruiter/zr_murmur2/actions/workflows/python-package.yml/badge.svg)](https://github.com/ZipRecruiter/zr_murmur2/actions/workflows/python-package.yml)
+
 # Murmur2
 This is Murmur2 hash wrapper for Python.
 
